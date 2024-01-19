@@ -2,7 +2,7 @@
 
 const db = require('../database');
 const plugins = require('../plugins');
-const cacheCreate = require('../cache/lru');
+const cacheCreate = require('../cache/lru').default;
 
 module.exports = function (User) {
     User.blocks = {

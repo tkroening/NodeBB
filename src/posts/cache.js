@@ -1,6 +1,6 @@
 'use strict';
 
-const cacheCreate = require('../cache/lru');
+const cacheCreate = require('../cache/lru').default;
 const meta = require('../meta');
 
 module.exports = cacheCreate({
