@@ -1,6 +1,6 @@
 'use strict';
 
-const cacheCreate = require('../cache/lru');
+const cacheCreate = require('../cache/lru').default;
 
 module.exports = function (Groups) {
     Groups.cache = cacheCreate({
