@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 // import LRU from 'lru-cache';
 const lru_cache_1 = __importDefault(require("lru-cache"));
 // lru-cache@7 deprecations
@@ -129,4 +128,4 @@ function cacheCreate(opts) {
     };
     return cache;
 }
-exports.default = cacheCreate;
+module.exports = cacheCreate;

@@ -27,7 +27,7 @@ interface CacheBB {
 }
 type Opts = LRU.Options<keyType, valueType> & {name ?: string; enabled ?: boolean};
 
-export default function cacheCreate(opts : Opts) {
+function cacheCreate(opts : Opts) {
     // sometimes we kept passing in `length` with no corresponding `maxSize`.
     // This is now enforced in v7; drop superfluous property
     if (opts.hasOwnProperty('length') && !opts.hasOwnProperty('maxSize')) {
@@ -161,3 +161,5 @@ export default function cacheCreate(opts : Opts) {
 
     return cache;
 }
+
+export = cacheCreate;
